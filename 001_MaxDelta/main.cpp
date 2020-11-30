@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 
 /*
  * Вам даётся массив целых чисел.
@@ -10,6 +11,35 @@
  */
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
-    return 0;
+    std::vector<int> vec = {-2,1,-3,4,-1,2,1,-5,4};
+    int max = vec[0] + vec[1];
+    int a = 0;
+    int b = 1;
+    for (int i = 0; i < vec.size() - 1; i++) {
+        if (vec[i] + vec[i + 1] > max) {
+            a = i;
+            b = i + 1;
+            max = vec[i] + vec[i + 1];
+        }
+    }
+
+    int delta = max;
+    for (int i = b + 1; i < vec.size(); i++) {
+        delta += vec[i];
+        if (delta >= max) {
+            max = delta;
+            b = i;
+        }
+    }
+
+    delta = max;
+    for (int i = a - 1; i > 0; i--) {
+        delta += vec[i];
+        if (delta >= max) {
+            max = delta;
+            a = i;
+        }
+    }
+
+    std::cout << a << " " << b << std::endl;
 }
