@@ -1,0 +1,3 @@
+C:/Users/Ana/ClionProjects/Module_018/001_MaxDelta/cmake-build-debug/CMakeFiles/001_MaxDelta.dir
+C:/Users/Ana/ClionProjects/Module_018/001_MaxDelta/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Ana/ClionProjects/Module_018/001_MaxDelta/cmake-build-debug/CMakeFiles/rebuild_cache.dir
