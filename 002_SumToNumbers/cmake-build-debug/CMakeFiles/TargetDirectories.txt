@@ -1,0 +1,3 @@
+C:/Users/Ana/ClionProjects/Module_018/002_SumToNumbers/cmake-build-debug/CMakeFiles/002_SumToNumbers.dir
+C:/Users/Ana/ClionProjects/Module_018/002_SumToNumbers/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Ana/ClionProjects/Module_018/002_SumToNumbers/cmake-build-debug/CMakeFiles/rebuild_cache.dir
