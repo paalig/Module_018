@@ -14,7 +14,48 @@
  * завершение программы
  */
 
+int InputValue() {
+    int a;
+    std::cout << "Input value: ";
+    std::cin >> a;
+
+    return a;
+}
+
 int main() {
-    std::cout << "Hello, World!" << std::endl;
-    return 0;
+    std::vector<int> vec(0);
+    int value = InputValue();
+    while (value != -2) {
+        if (value == - 1) {
+            if (vec.empty()) {
+                std::cout << "No one number in the array" << std::endl;
+            } else if (vec.size() < 5) {
+                std::cout << "There is no 5 numbers in the array. Maximum is " << vec[vec.size() - 1] << std::endl;
+            } else {
+                std::cout << vec[4] << std::endl;
+            }
+        } else {
+
+            if (vec.empty()) {
+                vec.resize(1);
+                vec[0] = value;
+            } else {
+                vec.push_back(value);
+                for (int i = vec.size() - 1; i == vec.size() - 1; i--) {
+                    for (int j = vec.size() - 1; j > 0; j--) {
+                        if (vec[j - 1] > vec[j]) {
+                            int temp = vec[j - 1];
+                            vec[j - 1] = vec[j];
+                            vec[j] = temp;
+                        } else {
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+        value = InputValue();
+    }
+    std::cout << std::endl;
+    std::cout << "Program finished";
 }
