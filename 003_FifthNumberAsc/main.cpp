@@ -35,21 +35,18 @@ int main() {
                 std::cout << vec[4] << std::endl;
             }
         } else {
-
             if (vec.empty()) {
                 vec.resize(1);
                 vec[0] = value;
             } else {
                 vec.push_back(value);
-                for (int i = vec.size() - 1; i == vec.size() - 1; i--) {
-                    for (int j = vec.size() - 1; j > 0; j--) {
-                        if (vec[j - 1] > vec[j]) {
-                            int temp = vec[j - 1];
-                            vec[j - 1] = vec[j];
-                            vec[j] = temp;
-                        } else {
-                            break;
-                        }
+                for (int j = vec.size() - 1; j > 0; j--) {
+                    if (vec[j - 1] > vec[j]) {
+                        int temp = vec[j - 1];
+                        vec[j - 1] = vec[j];
+                        vec[j] = temp;
+                    } else {
+                        break;
                     }
                 }
             }
