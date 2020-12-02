@@ -11,7 +11,7 @@
  */
 
 int main() {
-    std::vector<int> vec = {-2,1,-3,4,-1,2,1,-5,4};
+    std::vector<int> vec = {3,1,-3,4,1,2,1,-5,4};
     int max = vec[0] + vec[1];
     int a = 0;
     int b = 1;
@@ -33,7 +33,7 @@ int main() {
     }
 
     delta = max;
-    for (int i = a - 1; i > 0; i--) {
+    for (int i = a - 1; i >= 0; i--) {
         delta += vec[i];
         if (delta >= max) {
             max = delta;
